@@ -1,6 +1,7 @@
 import discord
 import os
 from dotenv import load_dotenv
+from keep_alive import keep_alive
 
 load_dotenv()
 dtoken = os.getenv('DKEY')
@@ -22,4 +23,5 @@ intents = discord.Intents.default()
 intents.message_content = True
 
 client = MyClient(intents=intents)
+keep_alive()
 client.run(dtoken)
