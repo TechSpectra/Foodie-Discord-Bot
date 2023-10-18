@@ -25,7 +25,7 @@ jobs:
         run: python bot/main.py
 
       - name: Set up testing environment
-        run: pip install -r bot/requirements-test.txt  # Assuming you have a separate test requirements file
+        run: pip install -r bot/requirements-test.txt  
 
       - name: Run tests
-        run: pytest  # Modify this to match your testing framework and command
+        run: pytest  
