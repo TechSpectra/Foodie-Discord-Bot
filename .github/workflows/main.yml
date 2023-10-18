@@ -1,0 +1,31 @@
+name: Run main.py and Test
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the code
+        uses: actions/checkout@v2
+
+      - name: Set up Python 3.x
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+
+      - name: Install dependencies
+        run: pip install -r bot/requirements.txt
+
+      - name: Run main.py
+        run: python bot/main.py
+
+      - name: Set up testing environment
+        run: pip install -r bot/requirements-test.txt  # Assuming you have a separate test requirements file
+
+      - name: Run tests
+        run: pytest  # Modify this to match your testing framework and command
