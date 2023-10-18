@@ -1,10 +1,16 @@
+import sys
+sys.dont_write_bytecode = True
+
 import discord
 import os
 from dotenv import load_dotenv
 from keep_alive import keep_alive
+from prompter import suggest_foods
+
+sys.dont_write_bytecode = True
 
 load_dotenv()
-dtoken = os.getenv('DKEY')
+dtoken = os.getenv("DKEY")
 
 class MyClient(discord.Client):
     async def on_ready(self):
@@ -17,7 +23,14 @@ class MyClient(discord.Client):
 
         print(f"Message from {message.author}: {message.content}")
         channel = message.channel
-        await channel.send("Hi, I am Foodie-Bot")
+        user_ingredients = [ingredient.strip() for ingredient in message.content.split(',')]
+        suggested_foods = suggest_foods(user_ingredients)
+
+        print("Possible foods you can make with these ingredients:")
+        for food in suggested_foods:
+            #print("- " + food)
+            await channel.send("- " + food)
+
 
 intents = discord.Intents.default()
 intents.message_content = True
