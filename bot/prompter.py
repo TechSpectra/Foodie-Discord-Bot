@@ -1,4 +1,3 @@
-# Define a dictionary of raw ingredients and the foods they can be used for.
 ingredients_to_foods = {
     'tomatoes': ['spaghetti', 'salsa', 'caprese salad', 'tomato soup', 'pizza'],
     'chicken': ['grilled chicken', 'chicken curry', 'chicken soup', 'chicken tacos', 'chicken salad'],
