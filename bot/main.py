@@ -29,6 +29,7 @@ class MyClient(discord.Client):
             cleanedmsg = re.sub(r'<.*?>', '', message.content)
             user_ingredients = [ingredient.strip() for ingredient in cleanedmsg.split(',')]
             suggested_foods = suggest_foods(user_ingredients)
+            await channel.send("Here are some foods you can make with those ingredients:")
             for food in suggested_foods:
                 #print("- " + food)
                 await channel.send("- " + food)
