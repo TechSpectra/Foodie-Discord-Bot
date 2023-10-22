@@ -22,7 +22,11 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r bot/requirements.txt  # Change this to the path of your requirements file
-
+        
+    - name: Set execute permissions
+      run: |
+        chmod +x bot/main.py
+        
     - name: Run the Discord bot
       run: |
         bot/main.py  # Adjust the path and filename accordingly
