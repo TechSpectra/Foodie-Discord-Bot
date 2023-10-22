@@ -8,7 +8,6 @@ from dotenv import load_dotenv
 from keep_alive import keep_alive
 from prompter import suggest_foods
 
-sys.dont_write_bytecode = True
 
 load_dotenv()
 dtoken = os.getenv("DKEY")
