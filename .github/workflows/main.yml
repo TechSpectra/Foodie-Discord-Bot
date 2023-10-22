@@ -28,6 +28,8 @@ jobs:
         chmod +x bot/main.py
         
     - name: Run the Discord bot
+      env:
+        DKEY: ${{ secrets.DKEY }}
       run: |
         bot/main.py  # Adjust the path and filename accordingly
         sleep 180  # Wait for 3 minutes and then terminate
