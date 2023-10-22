@@ -5,7 +5,6 @@ sys.dont_write_bytecode = True
 import discord
 import os
 from dotenv import load_dotenv
-from keep_alive import keep_alive
 from prompter import suggest_foods
 
 
@@ -38,5 +37,4 @@ intents = discord.Intents.default()
 intents.message_content = True
 
 client = MyClient(intents=intents)
-keep_alive()
 client.run(dtoken)
