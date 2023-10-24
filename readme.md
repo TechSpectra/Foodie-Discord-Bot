@@ -1,3 +1,5 @@
+![Foodie-Discord-Bot](https://github.com/tonima26122004/Foodie-Discord-Bot/assets/113163028/04b3d7fd-d427-45f6-99ac-a6330359dab4)
+
 <h1 align="center">🍔 Foodie-Discord-Bot 🤖</h1>
 <p align="center">
   A Discord bot that suggests recipes based on ingredients you have.
