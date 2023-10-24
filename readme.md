@@ -3,7 +3,7 @@
   A Discord bot that suggests recipes based on ingredients you have.
 </p>
 
-![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
+<a href="https://github.com/TechSpectraDWN/Foodie-Discord-Bot/blob/master/LICENSE">![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)</a>
 
 ## 🚀 Quick Start
 
