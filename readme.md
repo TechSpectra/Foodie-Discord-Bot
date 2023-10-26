@@ -9,7 +9,7 @@
 
 
 
-## 👩‍🍳 How It Works
+## 👩‍🍳 How It Works ##
 
 RecipeBot listens for messages on your Discord server. To get recipe suggestions, mention the bot with a list of ingredients separated by commas.
 
@@ -17,10 +17,10 @@ Example: **@Foodie-Bot** tomatoes, chicken, rice
 
 The bot will respond with a list of recipes you can make with the provided ingredients. <br>
 
-## 🍽️ Supported Ingredients
+## 🍽️ Supported Ingredients ##
 Check out the list of supported ingredients in prompter.py. Feel free to contribute by adding more ingredients and recipes. <br>
 
-## 🤝 Contributing
+## 🤝 Contributing ##
 We welcome contributions from the community. If you want to add features, improve the code, or fix issues, please follow these steps:
 
 1. **Clone the repository:**
@@ -37,10 +37,10 @@ We welcome contributions from the community. If you want to add features, improv
 
 <br>
 
-## 📝 License
+## 📝 License ##
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 <br>
 
-## 📧 Contact
+## 📧 Contact ##
 If you have any questions or need assistance, feel free to reach out to the project maintainers.
