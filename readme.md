@@ -2,7 +2,7 @@
 
 <h1 align="center">🍔 Foodie-Discord-Bot 🤖</h1>
 <p align="center">
-  A Discord bot that suggests recipes based on ingredients you have.
+  A Discord bot that suggests food recipes based on ingredients you have.
 </p>
 
 <a href="https://github.com/TechSpectraDWN/Foodie-Discord-Bot/blob/master/LICENSE">![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)</a>
