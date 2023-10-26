@@ -2,7 +2,9 @@ import re
 import sys
 sys.dont_write_bytecode = True
 
-import discord
+import nextcord
+from nextcord import Interaction
+from nextcord.ext import commands
 import os
 from dotenv import load_dotenv
 from prompter import suggest_foods
@@ -11,30 +13,29 @@ from prompter import suggest_foods
 load_dotenv()
 dtoken = os.getenv("DKEY")
 
-class MyClient(discord.Client):
-    async def on_ready(self):
-        print(f"Logged on as {self.user}!")
 
-    async def on_message(self, message):
-        # Check if the message is from the bot itself
-        if message.author == self.user:
-            return
+intents = nextcord.Intents.default()
+intents.members = True
+
+client = commands.Bot(command_prefix="!", intents=intents)
+
+@client.event
+async def on_ready():
+    print(f"Logged on as {client.user}!")
+
+res=""
+
+testserverId = 1106837576964390994
+@client.slash_command(name="test" , description="gives you food according to ingredients", guild_ids=[testserverId])
+async def test(interaction: Interaction, question: str):
+    print(question)
+    cleanedmsg = re.sub(r'<.*?>', '', question)
+    user_ingredients = [ingredient.strip() for ingredient in cleanedmsg.split(',')]
+    suggested_foods = suggest_foods(user_ingredients)
+    res = "" 
+    for food in suggested_foods:
+        res += "- " + food + "\n"
+    await interaction.response.send_message("Here are some foods you can make with those ingredients:\n" + res)
 
 
-        print(f"Message from {message.author}: {message.content}")
-        channel = message.channel
-        if self.user.mentioned_in(message):
-            cleanedmsg = re.sub(r'<.*?>', '', message.content)
-            user_ingredients = [ingredient.strip() for ingredient in cleanedmsg.split(',')]
-            suggested_foods = suggest_foods(user_ingredients)
-            await channel.send("Here are some foods you can make with those ingredients:")
-            for food in suggested_foods:
-                #print("- " + food)
-                await channel.send("- " + food)
-
-
-intents = discord.Intents.default()
-intents.message_content = True
-
-client = MyClient(intents=intents)
 client.run(dtoken)

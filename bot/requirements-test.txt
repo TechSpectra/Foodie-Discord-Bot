@@ -1,5 +1,0 @@
-pytest
-coverage
-flake8
-black
-mypy
