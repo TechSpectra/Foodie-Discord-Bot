@@ -7,31 +7,7 @@
 
 <a href="https://github.com/TechSpectraDWN/Foodie-Discord-Bot/blob/master/LICENSE">![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)</a>
 
-## 🚀🧑‍🚀 Quick Start
 
-1. **Clone the repository:**
-
-   ```bash
-   git clone https://github.com/DON2604/Foodie-Discord-Bot.git
-   cd bot
-
-2. **Set Up Environment Variables:**
-
-    Create a .env file in the project root and add your Discord bot token:
-    ```
-    DKEY=your_bot_token_here
-    ```
-
-3. **Install Dependencies:**
-    ```
-    pip install -r requirements.txt
-    ```
-
-4. **Run the Bot:**
-    ```
-    python main.py
-    ```
-<br>
 
 ## 👩‍🍳 How It Works
 
