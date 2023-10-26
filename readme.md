@@ -1,35 +1,13 @@
+![Foodie-Discord-Bot](https://github.com/tonima26122004/Foodie-Discord-Bot/assets/113163028/04b3d7fd-d427-45f6-99ac-a6330359dab4)
+
 <h1 align="center">🍔 Foodie-Discord-Bot 🤖</h1>
 <p align="center">
   A Discord bot that suggests recipes based on ingredients you have.
 </p>
 
-![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
+<a href="https://github.com/TechSpectraDWN/Foodie-Discord-Bot/blob/master/LICENSE">![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)</a>
 
-## 🚀 Quick Start
 
-1. **Clone the repository:**
-
-   ```bash
-   git clone https://github.com/DON2604/Foodie-Discord-Bot.git
-   cd bot
-
-2. **Set Up Environment Variables:**
-
-    Create a .env file in the project root and add your Discord bot token:
-    ```
-    DKEY=your_bot_token_here
-    ```
-
-3. **Install Dependencies:**
-    ```
-    pip install -r requirements.txt
-    ```
-
-4. **Run the Bot:**
-    ```
-    python main.py
-    ```
-<br>
 
 ## 👩‍🍳 How It Works
 
