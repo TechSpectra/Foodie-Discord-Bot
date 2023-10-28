@@ -26,7 +26,8 @@ async def on_ready():
 res=""
 
 testserverId = 1106837576964390994
-@client.slash_command(name="test" , description="gives you food according to ingredients", guild_ids=[testserverId])
+
+@client.slash_command(name="test" , description="gives you food according to ingredients")
 async def test(interaction: Interaction, question: str):
     print(question)
     cleanedmsg = re.sub(r'<.*?>', '', question)
